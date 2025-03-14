@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <div class="training-scrollbar" id="trainingBar"></div>
+
+    <div id="training-metrics">
+      <div>Epoch 100</div>
+      <div class="metric" id="progress-text"></div>
+      <div class="metric" id="eta-text"></div>
+    </div>
+    <nav id="desktop-nav">
+      <div class="logo">Sudhir Vardhan Reddy</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Sudhir Vardhan Reddy</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <!-- <li><a href="#blog" onclick="toggleMenu()">Blog</a></li>
+          <li>
+            <a href="#achievements" onclick="toggleMenu()">Achievements</a>
+          </li> -->
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Rakesh profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Sudhir</h1>
+        <p class="section__text__p2">Cloud & DevOps Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/sudhir-reddy_cloud_engineer.pdf')"
+          >
+            Download CV
+          </button>
+          <a href="#contact"
+            ><button class="btn btn-color-1">Contact Info</button></a
+          >
+        </div>
+        <div id="socials-container">
+          <a
+            href="https://www.linkedin.com/in/sudhir-reddy-4598bb1ab/"
+            target="_blank"
+          >
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+            />
+          </a>
+          <a href="https://github.com/sudhir-vardhan-reddy" target="_blank">
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="icon"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>1+ years <br />Cloud & DevOps Engineer</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                Bachelors Degree in<br />Computer Science and Engineering
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Cloud & DevOps Engineer with 1+ years of experience in cloud infrastructure, automation, CI/CD, and security. Skilled in AWS, Terraform, Kubernetes, Docker, Ansible, Python, and Generative AI. Experienced in microservices deployment, serverless computing, container orchestration, and infrastructure as code (IaC).
+              Passionate about optimizing cloud solutions, enhancing system reliability, and implementing security best practices. Proficient in monitoring, observability, and automation, leveraging tools like GitHub Actions, Jenkins, CloudWatch, and Prometheus to streamline workflows and improve efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Cloud & DevOps Engineer</h2>
+            <p class="experience-company-title">Coderview Technologies</p>
+            <p class="experience-year-text">Dec 2023 - Present</p>
+            <div class="article-container">
+              <!-- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Large Language Models</h3>
+                  <p>Experienced</p>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AWS Cloud</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python Programming</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Terraform And Ansible</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git & Github Actions</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Kubernetes</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Docker</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Linux</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Analytics</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Langflow</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">
+              Junior Cloud Engineer
+            </h2>
+            <p class="experience-company-title">Java Home Cloud</p>
+            <p class="experience-year-text">May 2023 - Nov 2023</p>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CI/CD</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>AWS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python Programming</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL Database</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <!-- <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Image Processing</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article> -->
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#skills'"
+      /> -->
+    </section>
+
+    <section id="skills" class="skills-section">
+      <h1 class="title">Skills</h1>
+      <div class="text">
+        Below is a summary of my technical and analytical skills, tools, and
+        libraries that I work with in my professional journey.
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="skills-category">
+        <h3>Technical Skills</h3>
+        <div class="cells">
+          <div class="cell">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+              alt="python logo"
+            />
+            <span>Python</span>
+          </div>
+          <div class="cell">
+            <img src="https://www.svgrepo.com/show/376353/terraform.svg" alt="Terraform logo" />
+            <span>Terraform</span>
+          </div>
+          <!-- <div class="cell">
+            <img src="./assets/java.png" alt="java logo" />
+            <span>Java</span>
+          </div> -->
+          <div class="cell">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/265px-Tux.svg.png" alt="Linux" />
+            <span>Linux</span>
+          </div>
+          <!-- <div class="cell">
+            <img src="./assets/mongo.png" alt="mongodb logo" />
+            <span>MongoDB</span>
+          </div> -->
+          <div class="cell">
+            <img src="./assets/aws.png" alt="aws logo" />
+            <span>AWS</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/ai.png" alt="ai logo" />
+            <span>Generative AI</span>
+          </div>
+          <!-- <div class="cell">
+            <img src="./assets/restapi.png" alt="rest api logo" />
+            <span>RESTful API</span>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- Libraries -->
+      <div class="skills-category">
+        <h3>Cloud & Infrastructure Services</h3>
+        <div class="cells">
+          <div class="cell">
+            <img src="https://www.svgrepo.com/show/448268/aws-ec2.svg" alt="Ec2 logo" />
+            <span>EC2</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/aws-s3.svg" alt="s3 logo" />
+            <span>Amazon S3</span>
+          </div>
+          <div class="cell">
+            <img src="https://www.svgrepo.com/show/353454/aws-iam.svg" alt="IAM logo" />
+            <span>AWS IAM</span>
+          </div>
+          <div class="cell">
+            <img
+              src="https://www.svgrepo.com/show/448267/aws-lambda.svg"
+              alt="Lambda logo"
+            />
+            <span>AWS Lambda</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/docker.png" alt="docker logo" />
+            <span>Docker</span>
+          </div>
+          <div class="cell">
+            <img
+              src="./assets/aws-vpc.png"
+              alt="vpc logo"
+            />
+            <span>AWS VPC</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/aws-route53.png" alt="aws-route53 logo" />
+            <span>Amazon Route53</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/aws-cloudwatch.png" alt="cloudwatch logo" />
+            <span>Amazon Cloudwatch</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/aws-ecr.svg" alt="ecr logo" />
+            <span>AWS ECR</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/aws-eks.jpg" alt="eks logo" />
+            <span>AWS EKS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>DevOps Tools</h3>
+        <div class="cells">
+          <div class="cell">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Apache_Maven_logo.svg/510px-Apache_Maven_logo.svg.png" alt="Maven logo" />
+            <span>Maven</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/git.png" alt="git logo" />
+            <span>Git & GitHub</span>
+          </div>
+          <div class="cell">
+            <img src="https://www.svgrepo.com/show/373699/jenkins.svg" alt="jenkins logo" />
+            <span>Jenkins</span>
+          </div>
+          <div class="cell">
+            <img
+              src="https://cdn.prod.website-files.com/5f05d5858fab461d0d08eaeb/66730f3b0fae1646ca80ccb4_653f86f2510568791af81674_643129d2a3160802b1a02eb9_Amazon-Macie.png"
+              alt="aws macie logo"
+            />
+            <span>Amazon Macie</span>
+          </div>
+          <div class="cell">
+            <img
+              src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2022/12/13/SecurityHublogo.jpg"
+              alt="aws security hub logo"
+            />
+            <span>AWS SecurityHub</span>
+          </div>
+          <div class="cell">
+            <img src="https://www.svgrepo.com/show/376353/terraform.svg" alt="Terraform logo" />
+            <span>Terraform</span>
+          </div>
+          <div class="cell">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/926px-Kubernetes_logo_without_workmark.svg.png" alt="K8s logo" />
+            <span>Kubernetes</span>
+          </div>
+          <div class="cell">
+            <img src="https://layer5.io/static/23bd800be4880360f484c8e4a73f06d5/argo-cd-color.svg" alt="agrocd logo" />
+            <span>AgroCD</span>
+          </div>
+          <div class="cell">
+            <img src="https://static-00.iconduck.com/assets.00/prometheus-icon-511x512-1vmxbcxr.png" alt="Prometheus logo" />
+            <span>Prometheus</span>
+          </div>
+          <div class="cell">
+            <img src="https://w7.pngwing.com/pngs/434/923/png-transparent-grafana-hd-logo-thumbnail.png" alt="Grafana logo" />
+            <span>Grafana</span>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Analytical Skills -->
+      <div class="skills-category">
+        <h3>Analytical Skills</h3>
+        <div class="container">
+          <p>
+            Data cleaning, preparation, and visualization, extracting insights
+            and identifying trends from complex datasets.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tools -->
+      <div class="skills-category">
+        <h3>Tools</h3>
+        <div class="cells">
+          <div class="cell">
+            <img src="https://avatars.githubusercontent.com/u/85702467?s=200&v=4" alt="langchain logo" />
+            <span>Langflow</span>
+          </div>
+          <!-- <div class="cell">
+            <img src="./assets/ollama.png" alt="ollama logo" />
+            <span>Ollama</span>
+          </div> -->
+          <!-- <div class="cell">
+            <img src="./assets/flask.png" alt="flask logo" />
+            <span>Flask</span>
+          </div> -->
+          <div class="cell">
+            <img src="./assets/streamlit.png" alt="streamlit logo" />
+            <span>Streamlit</span>
+          </div> 
+          <!-- <div class="cell">
+            <img src="./assets/langflow.svg" alt="langflow logo" />
+            <span>Langflow</span>
+          </div> -->
+          <div class="cell">
+            <img src="./assets/git.png" alt="git logo" />
+            <span>Git & GitHub</span>
+          </div>
+          <div class="cell">
+            <img src="./assets/docker.png" alt="docker logo" />
+            <span>Docker</span>
+          </div>
+          <div class="cell">
+            <img src="https://www.svgrepo.com/show/373712/json.svg" alt="Json logo" />
+            <span>Json</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Math Skills -->
+
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      /> -->
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My</p>
+      <h1 class="p-title">Projects</h1>
+
+      <!-- <div class="top-nav">
+        <ul class="nav-list">
+          <li><a href="#category0" class="btn2 p-btn-color-2">All</a></li>
+          <li>
+            <a href="#category1" class="btn2 btn-color-2 project-btn"
+              >Machine learning</a
+            >
+          </li>
+          <li>
+            <a href="#category2" class="btn2 btn-color-2 project-btn"
+              >Deep learning</a
+            >
+          </li>
+          <li>
+            <a href="#category3" class="btn2 btn-color-2 project-btn"
+              >Reinforcement learning</a
+            >
+          </li>
+          <li>
+            <a href="#category4" class="btn2 btn-color-2 project-btn"
+              >Data Science</a
+            >
+          </li>
+          <li>
+            <a href="#category5" class="btn2 btn-color-2 project-btn"
+              >Data Analysis</a
+            >
+          </li>
+          <li>
+            <a href="#category6" class="btn2 btn-color-2 project-btn">AI</a>
+          </li>
+          <li>
+            <a href="#category7" class="btn2 btn-color-2 project-btn"
+              >Built from scratch</a
+            >
+          </li>
+          <li>
+            <a href="#category8" class="btn2 btn-color-2 project-btn"
+              >Electronics</a
+            >
+          </li>
+          <li>
+            <a href="#category9" class="btn2 btn-color-2 project-btn"
+              >visualization</a
+            >
+          </li>
+          <li>
+            <a href="#category9" class="btn2 btn-color-2 project-btn"
+              >Research paper</a
+            >
+          </li>
+
+        </ul>
+      </div> -->
+
+      <!-- Projects Section -->
+      <div class="experience-details-container2">
+        <!-- Project One -->
+        <div class="details-container2 color-container">
+          <div class="article-container">
+            <img
+              src="./assets/ml_algorithms_from_scratch.png"
+              alt="Project 1"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            ML Algorithms from Scratch
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn project-btn"
+              onclick="openFullscreenModal('modal1')"
+            >
+              View Details
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Rakesh-Deshalli-Ravi/ML-algorithm-from-Scratch'"
+            >
+              Github
+            </button>
+            <!-- <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+
+        <!-- Modal for Project One -->
+        <div id="modal1" class="fullscreen-modal">
+          <div class="fullscreen-modal-content">
+            <span class="close" onclick="closeFullscreenModal('modal1')"
+              >&times;</span
+            >
+            <div class="modal-body">
+              <h1>ML Algorithms from Scratch</h1>
+              <p>
+                Coded up all ML Algos for deep understanding of the fundamental
+                principles of machine learning, without relying on high-level
+                libraries like scikit-learn.
+              </p>
+              <img
+                src="./assets/ml_algorithms_from_scratch.png"
+                alt="Project 1"
+                class="modal-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Two -->
+        <div class="details-container2 color-container">
+          <div class="article-container project">
+            <img
+              src="./assets/visualization_app.jpeg"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            AI-Driven Data Visualization App
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn project-btn"
+              onclick="openFullscreenModal('modal2')"
+            >
+              View Details
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Rakesh-Deshalli-Ravi/AI-Driven-Data-Visualization-App'"
+            >
+              Github
+            </button>
+            <!-- <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+
+        <!-- Modal for Project Two -->
+        <div id="modal2" class="fullscreen-modal">
+          <div class="fullscreen-modal-content">
+            <span class="close" onclick="closeFullscreenModal('modal2')"
+              >&times;</span
+            >
+            <div class="modal-body">
+              <h1>AI-Driven Data Visualization App</h1>
+              <p>
+                Developed a comprehensive data visualization app integrating 5
+                major Python libraries (Matplotlib, Plotly, Seaborn) to cover
+                95% of common visualization needs, and integrated Artificial
+                Intelligence tools with a fine-tuned LLM.
+              </p>
+              <img
+                src="./assets/visualization_app.jpeg"
+                alt="Project 2"
+                class="modal-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="details-container2 color-container">
+          <div class="article-container project">
+            <img
+              src="./assets/ai-summary.png"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Buzz Feeds - AI Content Summarization
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn project-btn"
+              onclick="openFullscreenModal('modal3')"
+            >
+              View Details
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Rakesh-Deshalli-Ravi/Buzz-Feeds-AI-Content-Summarization'"
+            >
+              Github
+            </button>
+            <!-- <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+
+        <!-- Modal for Project Two -->
+        <div id="modal3" class="fullscreen-modal">
+          <div class="fullscreen-modal-content">
+            <span class="close" onclick="closeFullscreenModal('modal3')"
+              >&times;</span
+            >
+            <div class="modal-body">
+              <h1>Buzz Feeds - AI Content Summarization</h1>
+              <p>
+                Integrated backend systems and AI models for personalized
+                content summaries. Developed a chatbot using RAG model and Astra
+                Vector DB for efficient data storage and retrieval
+              </p>
+              <img
+                src="./assets/ai-summary.png"
+                alt="Project 2"
+                class="modal-img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="details-container2 color-container">
+          <div class="article-container project">
+            <img
+              src="./assets/deforestation.jpeg"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Deforestation Monitoring System
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn project-btn"
+              onclick="openFullscreenModal('modal4')"
+            >
+              View Details
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Rakesh-Deshalli-Ravi/Deforestation-Monitoring-System'"
+            >
+              Github
+            </button>
+            <!-- <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+
+        <!-- Modal for Project Two -->
+        <div id="modal4" class="fullscreen-modal">
+          <div class="fullscreen-modal-content">
+            <span class="close" onclick="closeFullscreenModal('modal4')"
+              >&times;</span
+            >
+            <div class="modal-body">
+              <h1>Deforestation Monitoring System</h1>
+              <p>
+                Improved forest protection by creating an AI-enabled IoT device
+                detecting poaching and tree cutting. Achieved high accuracy in
+                identifying wood cutting sounds using a CNN trained on 4000+
+                audio files.
+              </p>
+              <img
+                src="./assets/deforestation.jpeg"
+                alt="Project 2"
+                class="modal-img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="details-container2 color-container">
+          <div class="article-container project">
+            <img
+              src="./assets/movie_recommendations.jpeg"
+              alt="Project 2"
+              class="project-img"
+            />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Movie Recommender System
+          </h2>
+          <div class="btn-container">
+            <button
+              class="btn project-btn"
+              onclick="openFullscreenModal('modal5')"
+            >
+              View Details
+            </button>
+            <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/Rakesh-Deshalli-Ravi/Movie-Recommender-System'"
+            >
+              Github
+            </button>
+            <!-- <button
+              class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/'"
+            >
+              Live Demo
+            </button> -->
+          </div>
+        </div>
+
+        <!-- Modal for Project Two -->
+        <div id="modal5" class="fullscreen-modal">
+          <div class="fullscreen-modal-content">
+            <span class="close" onclick="closeFullscreenModal('modal5')"
+              >&times;</span
+            >
+            <div class="modal-body">
+              <h1>Movie Recommender System</h1>
+              <p>
+                Developed an advanced content-based movie recommendation system
+                for Netflix and Amazon Prime, leveraging IMDb data and utilizing
+                item-based collaborative filtering with metrics such as cosine
+                similarity, Euclidean distance, Manhattan distance, and Pearson
+                correlation.
+              </p>
+              <img
+                src="./assets/movie_recommendations.jpeg"
+                alt="Project 2"
+                class="modal-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <span style="display: flex; justify-content: center">
+        <p>
+          In my free time, I continue to work on personal projects and have many
+          ideas just waiting to be realized.
+        </p>
+      </span>
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#blog'"
+      /> -->
+    </section>
+
+ 
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+    
+      <!-- Contact Info -->
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:sudhirvardhanreddyh@gmail.com">sudhirvardhanreddyh@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/sudhir-reddy-4598bb1ab/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/github.png" alt="Github icon" class="icon contact-icon" />
+          <p><a href="https://github.com/Sudhirreddy07">GitHub</a></p>
+        </div>
+      </div>
+    
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <input type="text" id="title" placeholder="Subject" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn-color-1">Send</button> <p id="form-status"></p> <!-- Status Message -->
+        </form>
+      </div>
+    </section>
+    
+    <!-- Load EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    
+    
+    
+    
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Sudhir Vardhan Reddy. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

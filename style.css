@@ -289,10 +289,11 @@ section {
 /* BUTTONS */
 
 .btn-container {
+  margin-top: auto; /* Pushes buttons to the bottom for alignment */
   display: flex;
   justify-content: center;
-  gap: 1rem;
 }
+
 
 .btn {
   font-weight: 600;
@@ -481,13 +482,16 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 200px; /* Ensures uniform image height */
+  object-fit: contain; /* Adjusts the image to fit without cropping */
+  border-radius: 8px;
 }
 
+
 .project-title {
-  margin: 1rem;
+  font-size: 1.2rem;
+  margin: 10px 0;
   color: black;
 }
 
@@ -787,8 +791,8 @@ body::-webkit-scrollbar {
 
 .details-container2 {
   flex: 1;
-  min-width: 250px; /* Ensure projects shrink for smaller screens */
-  max-width: 300px; /* Prevent projects from growing too large */
+  min-width: 320px;; /* Ensure projects shrink for smaller screens */
+  max-width: 420px; /* Prevent projects from growing too large */
   border: 1.5px solid rgb(163, 163, 163); /* Add border for consistency */
   border-radius: 20px; /* Add a slight border radius */
   background-color: rgb(250, 250, 250);
@@ -1005,8 +1009,8 @@ body::-webkit-scrollbar {
   height: 700px;
 }
 .modal-body img {
-  height: 300px;
-  width: 400px;
+  height: 320px;
+  width: 100%;
 }
 
 .modal-body h1 {
@@ -1027,11 +1031,14 @@ body::-webkit-scrollbar {
 }
 
 .modal-img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  margin: 20px 0;
+  width: 320px; /* Ensures all project boxes are the same width */
+  height: 420px; /* Adjust the height to make boxes uniform */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   border-radius: 10px;
+  padding: 15px;
+  background: rgb(250, 250, 250);
 }
 
 .close {

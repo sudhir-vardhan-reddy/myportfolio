@@ -11,10 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Write API Keys to `config.js`
+      - name: Setup Git Credentials
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Inject API Keys into `config.js`
         run: |
           echo "const config = {" > config.js
           echo "  EMAILJS_PUBLIC_KEY: '${{ secrets.EMAILJS_PUBLIC_KEY }}'," >> config.js
@@ -22,6 +27,10 @@ jobs:
           echo "  EMAILJS_TEMPLATE_ID: '${{ secrets.EMAILJS_TEMPLATE_ID }}'," >> config.js
           echo "  EMAILJS_TO_EMAIL: '${{ secrets.EMAILJS_TO_EMAIL }}'" >> config.js
           echo "}; export default config;" >> config.js
+
+      - name: Authenticate GitHub with Personal Token
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

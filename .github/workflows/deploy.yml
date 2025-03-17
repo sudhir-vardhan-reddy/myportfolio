@@ -1,0 +1,30 @@
+name: Deploy Static Site with Secrets
+
+on:
+  push:
+    branches:
+      - main  # Runs on push to main
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Write API Keys to `config.js`
+        run: |
+          echo "const config = {" > config.js
+          echo "  EMAILJS_PUBLIC_KEY: '${{ secrets.EMAILJS_PUBLIC_KEY }}'," >> config.js
+          echo "  EMAILJS_SERVICE_ID: '${{ secrets.EMAILJS_SERVICE_ID }}'," >> config.js
+          echo "  EMAILJS_TEMPLATE_ID: '${{ secrets.EMAILJS_TEMPLATE_ID }}'," >> config.js
+          echo "  EMAILJS_TO_EMAIL: '${{ secrets.EMAILJS_TO_EMAIL }}'" >> config.js
+          echo "}; export default config;" >> config.js
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: .

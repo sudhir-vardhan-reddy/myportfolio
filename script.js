@@ -277,38 +277,40 @@ function closeAchievement() {
 
 
 // contact form
+// Load config file dynamically
+import config from './config.js';
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault();
+document.getElementById("contact-form").addEventListener("submit", async function(event) {
+    event.preventDefault();
 
-  const formStatus = document.getElementById("form-status");
-  formStatus.textContent = "Sending message...";
-  formStatus.style.color = "blue"; // Indicate processing state
+    const formStatus = document.getElementById("form-status");
+    formStatus.textContent = "Sending message...";
+    formStatus.style.color = "blue"; 
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const title = document.getElementById("title").value;
-  const message = document.getElementById("message").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const title = document.getElementById("title").value;
+    const message = document.getElementById("message").value;
 
-  // Initialize EmailJS
-  emailjs.init("dYismGPbwaMFFeSO4");  // Replace with your EmailJS Public Key
+    // Initialize EmailJS with the secured public key
+    emailjs.init(config.EMAILJS_PUBLIC_KEY);
 
-  // Send Email using predefined recipient in EmailJS template
-  emailjs.send("service_vr3vz3f", "template_70ottil", {
-      to_email: "sudhirvardhan01@gmail.com",  // Set recipient manually
-      name: name,
-      email: email,
-      subject: title,
-      message: message
-  })
-  .then(() => {
-      formStatus.textContent = "Message sent successfully!";
-      formStatus.style.color = "green";
-      document.getElementById("contact-form").reset();
-  })
-  .catch((error) => {
-      formStatus.textContent = "Failed to send message. Try again.";
-      formStatus.style.color = "red";
-      console.error("Error:", error);
-  });
+    try {
+        await emailjs.send(config.EMAILJS_SERVICE_ID, config.EMAILJS_TEMPLATE_ID, {
+            to_email: config.EMAILJS_TO_EMAIL,
+            name: name,
+            email: email,
+            subject: title,
+            message: message
+        });
+
+        formStatus.textContent = "Message sent successfully!";
+        formStatus.style.color = "green";
+        document.getElementById("contact-form").reset();
+    } catch (error) {
+        formStatus.textContent = "Failed to send message. Try again.";
+        formStatus.style.color = "red";
+        console.error("Error:", error);
+    }
 });
+
